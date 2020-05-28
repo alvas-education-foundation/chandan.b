@@ -1,0 +1,64 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\fswiss\fcharset0 Arial-BoldMT;}
+{\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c13333\c13333\c13333;\cssrgb\c100000\c100000\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl220\partightenfactor0
+
+\f0\fs20 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 In Bubble sort, each pass consists of comparison each element in the file with its successor (i.e. x[i] with x[i+1]) and interchanging two elements if they are not in the proper order.\'a0
+\f1\b The array may be sorted in any pass. If the array is sorted, then remaining passes should be skipped off
+\f0\b0 . Write a C Program to sort an array of integers in ascending order and display the sorted array and Number of passes performed for sorting.\
+\
+#include <stdio.h>\
+void swap(int *xp, int *yp)\
+\{\
+int temp = *xp;\
+*xp = *yp;\
+*yp = temp;\
+\}\
+int bubbleSort(int arr[], int n)\
+\{\
+int i, j,count=0;\
+int swapped;\
+for (i = 0; i < n-1; i++)\
+\{\
+swapped = 0;\
+for (j = 0; j < n-i-1; j++)\
+\{\
+if (arr[j] > arr[j+1])\
+\{\
+swap(&arr[j], &arr[j+1]);\
+swapped = 1;\
+count++;\
+\}\
+\}\
+if (swapped == 0)\
+break;\
+\}\
+return count;\
+\}\
+void printArray(int arr[], int size)\
+\{\
+int i;\
+for (i=0; i < size; i++)\
+printf("%d ", arr[i]);\
+printf("\\n");\
+\}\
+int main()\
+\{\
+int arr[50],num;\
+printf("enter the number of elements");\
+scanf("%d",&num);\
+printf("enter the elements");\
+for(int i=0;i<num;i++)\{\
+scanf("%d",&arr[i]);\
+\}\
+int c=bubbleSort(arr, num);\
+printf("Sorted array: \\n");\
+printArray(arr, num);\
+printf("Number of passes:%d\\n",c);\
+return 0;\
+\}\
+}
