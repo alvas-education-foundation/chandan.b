@@ -9,12 +9,10 @@
 \pard\pardeftab720\sl220\sa200\partightenfactor0
 
 \f0\fs20 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Hint:\cb1 \uc0\u8232 \cb3 First Create a Singly Linked List Stack with the node corresponding to First Element is the base of the stack; and its link field must be always Null.\cb1 \uc0\u8232 \cb3 When you push First Element, It is the First and it is Base of the stack. Its Link must be Null. top pointer pointing to First. (top = First)\cb1 \uc0\u8232 \cb3 When you push any element, (No need of checking Stack full case because SLL is dynamic) Create a new node called temp using malloc function and insert the a number into Data field, and Link field must be pointing to top; and move the pointer top to point to temp.\cb1 \uc0\u8232 \cb3 When you pop, First check for stack Empty. if First == NULL, then Stack Empty. If it is not empty, The pointer temp must be pointing to top. Move the pointer top to top->link. delete temp.\cb1 \uc0\u8232 \cb3 When you display the stack element, First Check for Stack Empty as in pop operation. If it is not empty, Display all the elements of current stack starting from top to First.\cb1 \
+Hint:\cb1 \uc0\u8232 \cb3 First Create a Singly Linked List Stack with the node corresponding to First Element is the base of the stack; and its link field must be always Null.\cb1 \uc0\u8232 \cb3 When you push First Element, It is the First and it is Base of the stack. Its Link must be Null. top pointer pointing to First. (top = First)\cb1 \uc0\u8232 \cb3 When you push any element, (No need of checking Stack full case because SLL is dynamic) Create a new node called temp using malloc function and insert the a number into Data field, and Link field must be pointing to top; and move the pointer top to point to temp.\cb1 \uc0\u8232 \cb3 When you pop, First check for stack Empty. if First == NULL, then Stack Empty. If it is not empty, The pointer temp must be pointing to top. Move the pointer top to top->link. delete temp.\cb1 \uc0\u8232 \cb3 When you display the stack element, First Check for Stack Empty as in pop operation. If it is not empty, Display all the elements of current stack starting from top to First.\cb1 \
 \pard\pardeftab720\sl220\sa200\partightenfactor0
-\cf4 \cb3 \strokec4 #include <stdio.h>\cb1 \uc0\u8232 \cb3 #include <stdlib.h>\
-\pard\pardeftab720\sl120\partightenfactor0
-
-\fs22 \cf2 \cb1 \strokec2 \
+\cf4 \cb3 #include <stdio.h>\cb1 \uc0\u8232 \cb3 #include <stdlib.h>
+\fs22 \cf2 \cb1 \
 \pard\pardeftab720\sl220\sa200\partightenfactor0
 
 \fs20 \cf2 \cb3 struct node\cb1 \uc0\u8232 \cb3 \{\cb1 \uc0\u8232 \cb3 int info;\cb1 \uc0\u8232 \cb3 struct node *ptr;\cb1 \uc0\u8232 \cb3 \}*top,*top1,*temp;\cb1 \
